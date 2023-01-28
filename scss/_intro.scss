@@ -12,12 +12,12 @@
     border:1px solid white;
     width: 90%;
 
-    border-radius:20px;
+    border-radius:15px;
     text-align: center;
     margin: 1% 0;
     cursor: pointer;
     &:hover{
-      background:none;
+      background:rgba(225,225,225,.8);
       border:1px solid black;
     }
     
@@ -52,7 +52,7 @@
     width:100%;
     height: 75%;
     transition: all .2s linear;
-    filter:  grayscale(80%);
+    filter:  grayscale(100%);
     cursor: pointer;
     &:hover{
       filter:  grayscale(0%);
@@ -71,4 +71,7 @@
 }
 .tag {
   margin-right:0.4em;
+}
+.nav_item_active{
+  color:#eee;
 }

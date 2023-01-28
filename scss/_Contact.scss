@@ -1,0 +1,36 @@
+.Contact {
+font-size: 20px;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 90vh;
+}
+.Contact_inner {
+ background-color: white;
+  padding: 2em 1em;
+}
+.contact_item {
+
+}
+.social_icon{
+  color:black;
+  font-size: 1.2em;
+  transition: all .5s ;
+  &:hover{
+
+  background-image: linear-gradient(
+    -225deg,
+    #3b8d99 0%,
+    #6b6b83 29%,
+    #aa4b6b 67%,
+  );
+  background-clip: border-box;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+}
+}
