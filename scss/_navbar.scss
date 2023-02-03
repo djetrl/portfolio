@@ -1,6 +1,6 @@
 .navbar {
   box-shadow: 10px 5px 5px transparent;
-  
+  background: white;
 }
 .navbar_inner {
   display: flex;
@@ -8,7 +8,6 @@
   padding: 1em 0 ;
   align-items:center;
   justify-content: center;
-  background: white;
 }
 .nav_item {
   display: none;

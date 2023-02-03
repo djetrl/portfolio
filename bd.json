@@ -1,0 +1,30 @@
+{
+  "Contact":[
+    { 
+    "Phone": "+792374000996",
+    "mail": "leshadjet@mail.ru"
+  }
+  ],
+
+  "dataForGenerateBlock":[
+    {
+      "title":"Kion",
+      "img":"img/Koin_phote.PNG",
+      "src": "https://djetrl.github.io/koin/index.html",
+      "tag": ["#scss", "#js", "#jquery"]
+  },
+  {
+      "title":"MYEL",
+      "img":"img/MYEL_phote.PNG",
+      "src": "https://djetrl.github.io/MYEL/index.html",
+      "tag": ["#scss", "#js", "#jquery"]
+  },
+  {
+    "title":"ContractorX",
+    "img":"img/ContractorX_photo.PNG",
+    "src": "https://djetrl.github.io/ContractorX/index.html",
+    "tag": ["#scss", "#js", "#jquery"]
+  }
+  
+  ]
+}
