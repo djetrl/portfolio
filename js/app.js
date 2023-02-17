@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
       alert('error', response.status);
     }
     }
- function generateBlock(){
+ function generateBlockSlider(){
       let dataBlock = getDataBd('../bd.json');
       dataBlock.then( data =>{
         intro_inner.innerHTML = '';
@@ -63,19 +63,30 @@ window.addEventListener('DOMContentLoaded', () => {
           <div class="intro_contect">
             <div class="intro_item_title">${i.title}</div>
             <div class="container_tag">
-                ${  i.tag}
+               
             </div>
           </div>
           `;
-
+         
           intro_inner.append(elem);
-
+          
+          const d = document.querySelectorAll('.container_tag');
+        
+          i.tag.forEach((i)=>{
+            const elemTag = document.createElement('div');
+            elemTag.classList.add('tag');
+            elemTag.textContent = i;
+            console.log(i);
+            d.forEach((item)=>{
+            item.append(elemTag);
+          });
+          });
         });
         changeSlider();
       });
     }
 
-  generateBlock();
+    generateBlockSlider();
 // slider
 function changeSlider(){
 const slider = document.querySelector('.intro_inner'),

@@ -7,7 +7,8 @@ html{
 }
 body{
 	box-sizing: border-box;
-  font-family: 'Barlow', sans-serif;
+  font-family: monospace;
+
   font-style: normal;
   font-weight: 400;
   background: rgb(63,0,255);
@@ -42,3 +43,4 @@ body{
 @import "_navbar.scss";
 @import "_intro.scss";
 @import "_Contact.scss";
+@import "_CV.scss";

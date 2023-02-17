@@ -1,0 +1,93 @@
+.CV {
+font-size: 18px;
+margin: 1%;
+
+.Content_block {
+}
+
+.CV_Inner {
+ display: grid;
+ grid-template-columns: 1fr 3fr;
+ 
+ gap: 1%;
+}
+
+
+.CV_column {
+  
+  background-color:#FFFF;
+  border-radius: 10px;
+  padding: 10% 3%;
+  text-align: center;
+
+}
+.CV_img {
+  width: 50%;
+  border:  3px solid black;
+  border-radius:10px;
+  padding: 1%;
+  margin-bottom: 10%;
+}
+.CV_initials {
+
+  display:flex;
+  justify-content: center;
+  gap: 2%;
+}
+.Education_content{text-align: justify; padding: 0 17%;}
+ .CV_row{
+  margin-bottom: 5%;
+ 
+}
+.CV_table_skill {
+  display: flex;
+  gap:1%;
+}
+.HardSkill_column {
+  &::before{
+    content: 'Hard Skill';
+    font-size: 1.1em;
+    margin-bottom: 5%;
+    border-bottom: 2px solid black;
+  }
+}
+.table_column{
+
+  width: 50%;
+  height: 100%;
+  padding: 5%;
+  background: #eee;
+   box-shadow: 0 0 8px 8px white inset;
+   text-align: center;
+  
+}
+
+.table_column_inner{
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  gap: 1%;
+  margin-top: 5%;
+  overflow:auto;
+}
+
+.HardSkill_row, .SoftSkill_row{
+  // list-style: none;
+  text-align: left;
+  margin-top: 1%;
+}
+.SoftSkill_column {
+  width: 50%;
+  &::before{
+    content: 'Soft Skill';
+    font-size: 1.1em;
+    text-align: center;
+    border-bottom: 2px solid black;
+    
+  }
+}
+.table_title{
+  text-align: center;
+
+}
+}
+
