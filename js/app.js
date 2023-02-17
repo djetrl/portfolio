@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     }
  function generateBlockSlider(){
-      let dataBlock = getDataBd('../bd.json');
+      let dataBlock = getDataBd('https://djetrl.github.io/portfolio/bd.json');
       dataBlock.then( data =>{
         intro_inner.innerHTML = '';
         
