@@ -1,0 +1,18 @@
+.navigate{
+  position: absolute;
+  right: 3%;
+  top: 3%;
+
+  &-item{
+    text-decoration: none;
+    color:rgba(182, 184, 185, 1);
+    font-size: 18px;
+    letter-spacing:2.4px;
+    margin-left:30px;
+    
+    &:hover,&-active{
+      color:white;
+    }
+  }
+
+}

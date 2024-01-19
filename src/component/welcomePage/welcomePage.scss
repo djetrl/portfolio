@@ -1,0 +1,32 @@
+.welcomePage{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50% , -50%);
+  text-align: left;
+  p{
+    font-size: 24px;
+    word-spacing: 10px;
+    display: flex;
+    align-items:flex-end;
+    letter-spacing: 1px;
+    &:nth-child(1){
+      &::after{
+        display: block;
+          content: '';
+          width: 60%;
+          height: 2px;
+          margin-left: 5px;
+          background:var(--second-color)        
+      }
+    }
+    &:nth-child(3){
+      margin-left: 20%;
+    }
+  }
+  h1{
+    font-size: 100px;
+    margin: 10px 0;
+    letter-spacing: 5px;
+  }
+}

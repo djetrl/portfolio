@@ -1,0 +1,60 @@
+.status-page{
+  &-number{
+    position: fixed;
+    left: 3%;
+    bottom: 5%;
+    .active-item{
+      background:rgba(255, 253, 253, 0.88);
+      
+    }
+    li{
+      width: 20px;
+      height: 20px;
+      margin-top: 12px;
+      cursor: pointer;
+      border-radius:50%;
+      background:linear-gradient(rgba(129, 115, 115, 1), rgba(217, 217, 217, 0.45))
+    }
+  }
+  &-scroll{
+    display: flex;
+    transform: rotate(90deg);
+    color: white;
+    font-size: 14px;
+    align-items: center;
+    letter-spacing: 5px;
+    position: fixed;
+    bottom: 7.8%;
+    right: 0%;
+    transition: all .5s ease;
+  }
+  &:has(.bottom-scroll) &-scroll{
+    bottom: 13.2%;
+  }
+  
+  .top-scroll::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 95%;
+    height: 2px;
+    margin: 0 10px;
+    background: white;
+  }
+
+  .bottom-scroll::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 90%;
+    height: 2px;
+    margin: 0 10px;
+    background: white;
+  }
+}

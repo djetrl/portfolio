@@ -1,0 +1,54 @@
+.container:has(.AboutMe){
+  padding: 10% 7% 0 0%;
+}
+.AboutMe{
+  margin: 0 20%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  span{
+    color:var(--second-color);
+  }
+  &-content{
+    display: flex;
+    gap: 15px;
+    flex-flow: column;
+    font-size: 18px;
+    p{
+      word-spacing: 5px;
+    }
+    ul{
+      p{
+        padding-bottom: 15px;
+      }
+      li{
+        color:var(--second-color);
+        padding: 3px 0;
+        &::before{
+          content: '-';
+          margin-right: 5px;
+          color:var(--second-color);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1709px){
+  .AboutMe{
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+}
+
+@media screen and (max-width: 800px){
+  .AboutMe{
+    margin: 0 9%;
+  }
+  .container:has(.AboutMe){
+    padding: 10% 0% 0 0%;
+  }
+}

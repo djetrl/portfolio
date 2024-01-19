@@ -1,0 +1,106 @@
+.skills {
+  .title-page {
+    text-align: left;
+    margin-bottom: 5%;
+  }
+
+  &-content{
+    display: flex;
+    justify-content: center;
+    align-items:center
+  }
+  &-list{
+    justify-content: space-evenly;
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(5, .5fr);
+    transition: gap .5s linear;
+    animation: blockSTART .9s linear;
+  }
+  &-item{
+    display: flex;
+    box-shadow: 10px 8px 14px 2px black;
+    flex-direction: column;
+    width:clamp(80px,160px, 200px);
+    height: clamp(80px,160px, 200px);
+    background-color:rgb(146, 146, 146);
+    align-items:center;
+    justify-content: center;
+    & p{
+      animation: flicker 10s ease-in-out infinite;
+    }
+
+    &:hover{
+      cursor: pointer;
+      p{
+        animation: HoverItem 1s linear forwards;
+      }
+      path{
+        animation: HoverItem 1s linear forwards;
+      }
+    }
+  }
+  &-icon{
+    svg{
+      width: 120px;
+      height: 120px;
+    }
+    path{
+      animation: flicker 10s ease-in-out infinite;
+    }
+  }
+}
+
+
+@keyframes flicker{
+  0%{
+    fill:var(--second-color);
+    color:var(--second-color);
+  }
+  50%{
+    opacity: 0.2;
+    fill:white;
+    color:white;
+  }
+  100%{
+    fill:var(--second-color);
+    color:var(--second-color);
+    opacity: 1;
+    
+  }
+}
+@keyframes HoverItem{
+  0%{
+    fill:var(--second-color);
+    color:var(--second-color);
+    opacity: .4;
+  }
+  100%{
+    fill:var(--second-color);
+    color:var(--second-color);
+    opacity: 1;
+  }
+}
+@keyframes blockSTART{
+  0%{
+    gap: 0;
+  }
+  100%{
+    gap: 5%;
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .skills-list {
+    grid-template-columns: repeat(3, 0.5fr);
+  }
+}
+
+@media screen and (max-width: 790px){
+  .container:has(.skills){
+    padding: 10% 7% 0 7%;
+  }
+  .skills-list {
+    grid-template-columns: repeat(2, 0.5fr);
+  }
+}

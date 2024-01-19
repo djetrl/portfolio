@@ -1,0 +1,82 @@
+@import 'reset-css';
+@import './variables';
+@font-face {
+  font-family: FiraCode;
+  src: url(./fonts/FiraCode-VariableFont_wght.ttf);
+}
+body{
+  background: rgb(77 76 76);
+  height: 100%;
+}
+body, html, #root{
+  color: #202020;
+  font-size: var(--main-size-text );
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: FiraCode, sans-serif;
+  font-weight: bold !important;
+  color:#ffff;
+  font-size: 18px;
+}
+// * {
+//   outline: none;
+// }
+.container{
+  max-width: 1400px;
+  padding: 10% 7% 0 7%;
+  margin: auto;
+}
+.title-page{
+  font-size: 52px;
+  text-decoration: underline 1.5px;
+  margin-bottom: 15px;
+  word-spacing: 15px;
+}
+.fade{
+  transform: translate(-50% -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin:top right;
+  &-enter{
+    animation:appearance-page 1s forwards;
+  }
+  &-enter-active{
+
+  }
+  &-exit {
+    opacity: 0;
+  }
+  &-exit-active {
+
+
+  }
+  @keyframes appearance-page{
+    0%{
+      opacity: 0;
+      top: -100%;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+     top: 50%;
+    }
+}
+}
+.modal-clipboard{
+  position: absolute;
+  font-size: 40px;
+  top: 30%;
+  left: 30%;
+  transform: translate(-60%, -50%);
+  background:#636262;
+  padding: 3% 15%;
+  color:var(--second-color);
+  box-shadow: 3px 7px 11px black;
+  transform-origin: top;
+  animation: appearanceError .5s forwards;
+}
