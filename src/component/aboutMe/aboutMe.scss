@@ -1,12 +1,12 @@
-.container:has(.AboutMe){
-  padding: 10% 7% 0 0%;
-}
+
 .AboutMe{
-  margin: 0 20%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  
+  font-size: 24px;
+  box-shadow: 2px 9px 10px 0px black;
+  background-color: rgb(50, 50, 50);
+
+  width: 100%;
+  padding: 2.5em 1em;
+  margin-bottom: 2em;
   span{
     color:var(--second-color);
   }
@@ -35,20 +35,3 @@
   }
 }
 
-@media screen and (min-width: 1709px){
-  .AboutMe{
-    margin: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-  }
-}
-
-@media screen and (max-width: 800px){
-  .AboutMe{
-    margin: 0 9%;
-  }
-  .container:has(.AboutMe){
-    padding: 10% 0% 0 0%;
-  }
-}

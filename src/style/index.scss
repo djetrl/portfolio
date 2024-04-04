@@ -1,16 +1,20 @@
 @import 'reset-css';
 @import './variables';
-@font-face {
-  font-family: FiraCode;
-  src: url(./fonts/FiraCode-VariableFont_wght.ttf);
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Orbitron:wght@400..900&family=Russo+One&family=Workbench&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Workbench&display=swap');
 body{
-  background: rgb(77 76 76);
+  background: radial-gradient( rgb(68, 67, 67), rgb(29, 29, 29));
   height: 100%;
+
+
 }
 body, html, #root{
   color: #202020;
   font-size: var(--main-size-text );
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 }
 *,
 *::before,
@@ -26,7 +30,7 @@ body, html, #root{
 // }
 .container{
   max-width: 1400px;
-  padding: 10% 7% 0 7%;
+  padding: 3% 6% 0 6%;
   margin: auto;
 }
 .title-page{
@@ -79,4 +83,20 @@ body, html, #root{
   box-shadow: 3px 7px 11px black;
   transform-origin: top;
   animation: appearanceError .5s forwards;
+}
+
+
+.textWithUnderline {
+  background: -webkit-linear-gradient(right, #b2eca6, var(--second-color));
+    
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition:  background-size 0.5s ease;
+  cursor: pointer;
+  &:hover{
+    background-size:90% 3px;
+
+    background-position:center bottom;
+  }
 }

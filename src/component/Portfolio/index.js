@@ -2,66 +2,56 @@ import './Portfolio.scss';
 import github from '../../assets/img/iconProfile/github.png'
 import site from '../../assets/img/iconProfile/site.png'
 const Portfolio = ({ items, setStatusInfo, statusInfo, Data }) => {
-  const renderInfo = (status)=>{
-    if(status){
-      return(
-        <>
-            <img src={Data[status - 1].img} alt={`image ${Data[status - 1].img}`} />
-            <h3>{Data[status - 1].name}</h3>
-            <b></b> 
-            <p>{Data[status - 1].text}</p>
-            <div className="social">
-              <button style={{display:Data[status - 1].site === '' && "none"}}>
-                <a href={Data[status - 1].site}>
-                  <img src={site} alt="site" />
-                </a>
-              </button>
-              <button>
-                <a href={Data[status - 1].github}>
-                  <img src={github} alt="git" />
-                </a>
-              </button>
-            </div>
-        </>
-      )
-    }else{
-      return(
-        <div className="skeleton">
-          <div className="skeleton-img"></div>
-          <div className="skeleton-name"></div>
-          <div className="skeleton-line"></div>
-          <div className="skeleton-text"></div>
-          <div className="skeleton-social">
-            <b className="skeleton-social-icon"></b>
-            <b className="skeleton-social-icon"></b>
-          </div>
-      </div>
-      )
-    }
-  }
-  return (
-    <div className="Portfolio">
-      <h2 className="title-page">Portfolio</h2>
-      <div className="Portfolio-content">
-        <div className="Portfolio-list">
-          {
-            Data &&
-              Data.map((item, index)=>{
-                return(
-                  <div className="Portfolio-item"  key={item.name} onClick={()=>setStatusInfo(index + 1)}>
-                  <p  className={index < 2 && "darkenedTitle"}  >{item.name}</p>
-                  <img src={item.img} alt={`image ${item.name}`}/>
-                </div>
-                )
-              }
-              )
-            }
 
-        </div>
-        <div className="Portfolio-info">
-          {
-            renderInfo(statusInfo)
-          }
+  return (
+    <div className="container">
+      <div className="Portfolio" id='portfolio'>
+        <div className="Portfolio-content">
+            <div className="Portfolio-item">
+              <div className="Portfolio-item-text">
+                  <h1>PROJECT name</h1>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ipsum dignissimos porro harum quis. Vero consequuntur, optio culpa laudantium commodi, maiores alias hic tenetur voluptates perferendis maxime impedit. Ratione, deleniti.
+                  Eius odit placeat ipsa soluta nostrum, ut a cumque officia rerum, maiores perspiciatis cum commodi consectetur nulla. Sunt, aliquid sit quis explicabo nemo adipisci. Dolor neque soluta aperiam ea sint.
+                  Omnis laudantium molestiae dicta tempore dolor voluptates veritatis officiis temporibus sit sequi libero nulla harum, accusantium necessitatibus tenetur doloribus culpa explicabo amet consequuntur deleniti. Voluptates veritatis inventore fuga in aut?
+                  Dolore quo aliquam excepturi. Provident eos veritatis placeat quidem maxime earum itaque odit error. Maxime voluptates nemo ipsum, impedit porro, architecto ad quia voluptatum nam expedita numquam distinctio, tenetur quisquam.</p>
+              </div>
+              <div className='Portfolio-item-imgContainer'>
+                  <div className='Portfolio-imgContainer one'>
+                    <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="" />
+                  </div>
+                  <div className='Portfolio-imgContainer two'>
+                    <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="" />
+                  </div>
+                  <div className='Portfolio-imgContainer three'>
+                    <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="" />
+                  </div>
+              </div>
+            </div>
+            <div className="Portfolio-item">
+              <div className="Portfolio-item-text">
+                  <h1>PROJECT name</h1>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ipsum dignissimos porro harum quis. Vero consequuntur, optio culpa laudantium commodi, maiores alias hic tenetur voluptates perferendis maxime impedit. Ratione, deleniti.
+                  Eius odit placeat ipsa soluta nostrum, ut a cumque officia rerum, maiores perspiciatis cum commodi consectetur nulla. Sunt, aliquid sit quis explicabo nemo adipisci. Dolor neque soluta aperiam ea sint.
+                  Omnis laudantium molestiae dicta tempore dolor voluptates veritatis officiis temporibus sit sequi libero nulla harum, accusantium necessitatibus tenetur doloribus culpa explicabo amet consequuntur deleniti. Voluptates veritatis inventore fuga in aut?
+                  Dolore quo aliquam excepturi. Provident eos veritatis placeat quidem maxime earum itaque odit error. Maxime voluptates nemo ipsum, impedit porro, architecto ad quia voluptatum nam expedita numquam distinctio, tenetur quisquam.</p>
+                  <ul className="Portfolio_links">
+                    <li className='Portfolio_link'><a href=''><img src={github} alt="github" /></a></li>
+                    <li className='Portfolio_link'><img src={site} alt="site" /></li>
+                  </ul>
+              </div>
+              <div className='Portfolio-item-imgContainer'>
+                  <div className='Portfolio-imgContainer one'>
+                    <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="" />
+                  </div>
+                  <div className='Portfolio-imgContainer two'>
+                    <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="" />
+                  </div>
+                  <div className='Portfolio-imgContainer three'>
+                    <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg" alt="" />
+                  </div>
+              </div>
+
+            </div>
         </div>
       </div>
     </div>

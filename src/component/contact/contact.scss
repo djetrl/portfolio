@@ -1,6 +1,14 @@
+
+.container:has(.contact){
+  padding: 0 6% 0 6%;
+}
+
 .contact{
   width: 100%;
-  padding: 0 10% 0 10%;
+  box-shadow: 2px 9px 10px 0px black;
+  background-color: rgb(50, 50, 50);
+  
+  padding: 5% 10% ;
   height: auto;
   font-size: 2px;
   position: relative;
@@ -41,15 +49,17 @@
       width: 18vw;
       height: 4vw;
       background:#636262;
+      outline: none;
+      border:none;
       cursor: pointer;
       transition: all .2s linear;
       &:hover{
-        background:#393939;
         color:var(--second-color);
+
       }
       &:active{
-        background:#5b5b5b;
         color:white;
+        transform: scale(.99);
       }
     }
   }
@@ -68,16 +78,15 @@
       height: 90%;
       background-color:#636262;
       margin: auto;
-      box-shadow: 10px 8px 14px 2px black;
+
       transition: all .2s linear;
       &:hover{
-        background:#393939;
+        background-color: rgb(50, 50, 50);
         svg{
-          fill:#393939;
+          fill:rgb(50, 50, 50);
         }
       }
       &:active{
-        box-shadow:none;
         svg{
           fill:#393939;
         }

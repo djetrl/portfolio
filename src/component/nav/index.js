@@ -3,16 +3,36 @@ import {Link, useLocation} from 'react-router-dom';
 import UseActionPage from '../../redux/Slice/Page/ActionPage';
 
 import './nav.scss';
+import { useEffect, useState } from 'react';
 const Nav = ()=>{
-  const {setPageNumberFunc} = UseActionPage();
-  const location = useLocation();
+  const [unlockHeader,  setUnlockHeader] = useState(false);
+  useEffect(()=>{
+    window.addEventListener('scroll', ()=>{
+      if( window.scrollY > 200){
+        setUnlockHeader(true)
+      }else{
+        setUnlockHeader(false)
+      }
+    })
 
+
+    return ()=> window.removeEventListener('scroll', ()=>{
+      if( window.scrollY >= 100){
+        setUnlockHeader(true)
+      }else{
+        setUnlockHeader(false)
+      }
+    })
+  },[])
   return(
-    <div className="navigate">
-        <Link to={'/aboutme'} id={'2'} className={classNames("navigate-item", {"navigate-item-active":location.pathname.split('/')[1] === "aboutme"})} onClick={setPageNumberFunc}>About</Link>
-        <Link to={'/skills'} id={'3'} className={classNames("navigate-item", {"navigate-item-active":location.pathname.split('/')[1] === 'skills'})} onClick={setPageNumberFunc}>Skill</Link>
-        <Link to={'/portfolio'} id={'4'} className={classNames("navigate-item", {"navigate-item-active":location.pathname.split('/')[1] === 'portfolio'})} onClick={setPageNumberFunc}>Portfolio</Link>
-        <Link to={'/contact'} id={'5'} className={classNames("navigate-item", {"navigate-item-active":location.pathname.split('/')[1] === 'contact'})} onClick={setPageNumberFunc}>Contact</Link>
+    <div className={classNames("header", {"header-unlock": unlockHeader})}>
+      <h1>ALEKSIE</h1>
+      <div className="navigate">
+          <Link to={'/aboutme'} className="navigate-item textWithUnderline">About</Link>
+          <Link to={'/skills'} className="navigate-item textWithUnderline">Skill</Link>
+          <Link to={'/portfolio'}  className="navigate-item textWithUnderline">Portfolio</Link>
+          <Link to={'/contact'} className="navigate-item textWithUnderline">Contact</Link>
+      </div>
     </div>
   )
 }

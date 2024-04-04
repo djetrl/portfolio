@@ -9,20 +9,15 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <div className="container">
-        <TransitionGroup>
-            <CSSTransition key={location.key} classNames="fade" timeout={1000} unmountOnExit>
-              <Routes location={location}>
-                <Route path='/aboutme' Component={AboutMe} />
-                <Route path='/skills/*' Component={Skills} />
-                <Route path='/portfolio' Component={Portfolio}/>
-                <Route path='/contact' Component={Contact}/>
-                <Route path='/*' Component={WelcomePage} />;
-              </Routes>
-            </CSSTransition>
-          </TransitionGroup>
-      </div>
-      <StatusPage />
+
+
+      <WelcomePage/>
+      <AboutMe/>
+      <Skills/>
+      <Portfolio/>
+      <Contact/>
+
+
     </div>
   )
 }

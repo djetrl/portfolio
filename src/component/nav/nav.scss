@@ -1,18 +1,52 @@
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1em;
+  padding: .9em 1.5em;
+  box-shadow: 2px 9px 10px 0px black;
+
+  background-color:rgb(50, 50, 50);
+
+  transition: all .4s linear;
+
+  h1{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: auto;
+    letter-spacing: .3em;
+    text-transform: uppercase ;
+    background: -webkit-linear-gradient(right, #b2eca6, var(--second-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-unlock{
+
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+     z-index: 30;
+  }
+}
+
 .navigate{
-  position: absolute;
-  right: 3%;
-  top: 3%;
+
 
   &-item{
     text-decoration: none;
-    color:rgba(182, 184, 185, 1);
+    color:rgb(255, 255, 255);
     font-size: 18px;
     letter-spacing:2.4px;
     margin-left:30px;
-    
-    &:hover,&-active{
-      color:white;
-    }
-  }
 
+  }
 }
+
