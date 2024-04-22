@@ -25,7 +25,7 @@ const Nav = ()=>{
     })
   },[])
   return(
-    <div className={classNames("header", {"header-unlock": unlockHeader})}>
+    <div className={classNames("header  wow fadeInDown", {"header-unlock": unlockHeader})}>
       <h1>ALEKSIE</h1>
       <div className="navigate">
           <Link to={'/aboutme'} className="navigate-item textWithUnderline">About</Link>

@@ -7,6 +7,8 @@ import phone from '../../assets/img/contact/phone.svg';
 import tg from '../../assets/img/contact/tg.svg';
 import { Formik} from 'formik';
 import * as Yup from 'yup';
+
+
 const SingupSchema = Yup.object().shape({
   name:Yup.string()
           .min(2, 'To Short!')
@@ -28,7 +30,7 @@ const SingupSchema = Yup.object().shape({
 const Contact = ({copiedModal, onAppearanceModalCopied, sendMailModal, sendMail})=>{
   return(
     <div className="container">
-      <div className="contact" id='contact'>
+      <div className="contact wow fadeInUp"  id='contact'>
           {copiedModal ? (
                 <div className="modal-clipboard">
                     copied

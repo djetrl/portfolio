@@ -3,6 +3,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Orbitron:wght@400..900&family=Russo+One&family=Workbench&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Workbench&display=swap');
+
+@font-face {
+  font-family: "Neuropol";
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Neuropol"),
+       url("./fonts/Neuropol.ttf");
+}
+
 body{
   background: radial-gradient( rgb(68, 67, 67), rgb(29, 29, 29));
   height: 100%;
@@ -12,9 +20,11 @@ body{
 body, html, #root{
   color: #202020;
   font-size: var(--main-size-text );
-  font-family: "Orbitron", sans-serif;
+  font-family: "Neuropol", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  overflow-x: hidden;
+
 }
 *,
 *::before,
@@ -30,9 +40,14 @@ body, html, #root{
 // }
 .container{
   max-width: 1400px;
-  padding: 3% 6% 0 6%;
+  padding: 0 6% 0 6%;
   margin: auto;
+
+  &:nth-child(2){
+    padding: 3% 6% 0 6%;
+  }
 }
+
 .title-page{
   font-size: 52px;
   text-decoration: underline 1.5px;
@@ -58,6 +73,8 @@ body, html, #root{
 
 
   }
+
+  
   @keyframes appearance-page{
     0%{
       opacity: 0;

@@ -18,7 +18,7 @@ const Skills = ({
 
   return (
     <div className="container">
-      <div className='skills'>
+      <div className='skills  wow fadeInLeft'>
         <div className="skills-content">
           <div className="skills-list">
             <div className="skills-item">
