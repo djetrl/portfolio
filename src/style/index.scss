@@ -4,11 +4,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Orbitron:wght@400..900&family=Russo+One&family=Workbench&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Workbench&display=swap');
 
+
 @font-face {
   font-family: "Neuropol";
   /* Браузер сначала попробует найти шрифт локально */
   src: local("Neuropol"),
        url("./fonts/Neuropol.ttf");
+}
+@font-face {
+  font-family: "dudka-regualr";
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Dudka"),
+       url("./fonts/dudka/Dudka\ Regular.ttf");
 }
 
 body{
@@ -20,7 +27,7 @@ body{
 body, html, #root{
   color: #202020;
   font-size: var(--main-size-text );
-  font-family: "Neuropol", sans-serif;
+  font-family: dudka-regualr, sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   overflow-x: hidden;

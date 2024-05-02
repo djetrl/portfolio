@@ -11,10 +11,7 @@ import NodeJS from '../../assets/img/IconSkill/NodeJS.svg';
 import SCSS from '../../assets/img/IconSkill/SCSS.svg';
 import TypeScript from '../../assets/img/IconSkill/TypeScript.svg';
 import SocketIO from '../../assets/img/IconSkill/SocketIO.svg';
-const Skills = ({
-  infoVisible,
-  SetInfoVisible
-}) => {
+const Skills = () => {
 
   return (
     <div className="container">

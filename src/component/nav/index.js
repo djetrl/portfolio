@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {Link, useLocation} from 'react-router-dom';
+import { Link } from 'react-scroll';
 import UseActionPage from '../../redux/Slice/Page/ActionPage';
 
 import './nav.scss';
@@ -25,13 +25,15 @@ const Nav = ()=>{
     })
   },[])
   return(
-    <div className={classNames("header  wow fadeInDown", {"header-unlock": unlockHeader})}>
-      <h1>ALEKSIE</h1>
-      <div className="navigate">
-          <Link to={'/aboutme'} className="navigate-item textWithUnderline">About</Link>
-          <Link to={'/skills'} className="navigate-item textWithUnderline">Skill</Link>
-          <Link to={'/portfolio'}  className="navigate-item textWithUnderline">Portfolio</Link>
-          <Link to={'/contact'} className="navigate-item textWithUnderline">Contact</Link>
+    <div className="container">
+        <div className={classNames("header  wow fadeInDown", {"header-unlock": unlockHeader})}>
+        <h1>ALEKSIE</h1>
+        <div className="navigate">
+            <Link to={'#aboutme'} smooth={true} duration={700} className="navigate-item textWithUnderline">About</Link>
+            <Link to={'#skills'} smooth={true} duration={700} className="navigate-item textWithUnderline">Skill</Link>
+            <Link to={'#portfolio'} smooth={true} duration={700}  className="navigate-item textWithUnderline">Portfolio</Link>
+            <Link to={'#contact'} smooth={true} duration={700} className="navigate-item textWithUnderline">Contact</Link>
+        </div>
       </div>
     </div>
   )

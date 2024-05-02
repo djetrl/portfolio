@@ -8,7 +8,7 @@ const AboutMe = () => {
           <p className="wow fadeInUp" data-wow-duration="2s">Привет! Меня зовут <span>Гайдаренко Алексей</span> и я начинающий frontend-разработчик. Мой профиль – создание современных и удобных интерфейсов для веб-приложений.</p>
           <p className="wow fadeInUp" data-wow-duration="2s"> Я обладаю богатым опытом в разработке веб-сайтов, лендингови веб-приложений c использованием как ванильного javaScript, так и с использованием таких фреймворков как ReactJs, NextJS.</p>
           <p className="wow fadeInUp" data-wow-duration="2s"> Имеется опыт работы с AngualarJS.</p>
-          <ul className="wow fadeInUp" data-wow-duration="2s">
+          <ul className="wow fadeInLeft" data-wow-duration="2s">
             <p>Мои навыки включают в себя:</p>
             <li>HTML, CSS, Javascript, scss и jQuery, Typescript;</li>
             <li>Работу с фреймворками: Bootstrap, ant.design;</li>

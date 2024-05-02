@@ -1,6 +1,6 @@
 .skills {
   font-size: 24px;
-  box-shadow: 2px 9px 10px 0px black;
+  box-shadow: 2px 2px 10px 0px black;
   background-color: rgb(50, 50, 50);
   width: 100%;
   padding: 1em 0 3em 0;
@@ -23,10 +23,19 @@
     grid-template-columns: repeat(5, .5fr);
     transition: gap .5s linear;
     animation: blockSTART .9s linear;
+    &:hover > :not(:hover){
+      path, p {
+        transition: all .5 ease;
+        opacity: 0.2;
+        fill:white;
+        color:white;
+        animation: none;
+      }
+     }
   }
   &-item{
     display: flex;
-    box-shadow: 10px 8px 14px 2px black;
+    box-shadow:3px 2px 10px 2px black;
     flex-direction: column;
     width:clamp(80px,160px, 200px);
     height: clamp(80px,160px, 200px);
@@ -37,10 +46,12 @@
     & p{
       animation: flicker 10s ease-in-out infinite;
     }
-
     &:hover{
       cursor: pointer;
 
+      transform: scale(1.1);
+      transition: all .4s ease;
+      
       p{
         animation: HoverItem 1s linear forwards;
       }
@@ -49,6 +60,7 @@
       }
     }
   }
+
   &-icon{
     svg{
       width: 120px;

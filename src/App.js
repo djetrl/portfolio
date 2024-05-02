@@ -1,7 +1,8 @@
 import React from 'react';
 import {WOW} from 'wowjs';
 import { Nav } from './component';
-import { StatusPage, Skills, Portfolio, Contact } from './container';
+import { Element } from 'react-scroll';
+import {  Skills, Portfolio, Contact } from './container';
 import { WelcomePage, AboutMe } from './component';
 class App extends React.Component {
 	componentDidMount() {
@@ -19,11 +20,18 @@ class App extends React.Component {
       <div className="App">
         <Nav />
         <WelcomePage/>
-        <AboutMe/>
-        <Skills/>
-        <Portfolio/> 
-        <Contact/>
-  
+        <Element name='#aboutme'> 
+          <AboutMe/>
+        </Element>
+        <Element name='#skills'> 
+          <Skills/>
+        </Element>
+        <Element name='#portfolio'> 
+          <Portfolio/> 
+        </Element>
+        <Element name='#contact'> 
+          <Contact/>
+        </Element>
     </div>
 		)
 	}

@@ -1,6 +1,6 @@
 
 import './welcomePage.scss';
-import video  from '../../assets/video/istockphoto-1046965704-640_adpp_is.mp4'
+import video  from '../../assets/video/video.mp4'
 const WelcomePage = ()=>{
   return(
     <div className="container">
