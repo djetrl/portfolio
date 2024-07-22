@@ -6,10 +6,19 @@ import './nav.scss';
 import { useEffect, useState } from 'react';
 const Nav = ()=>{
   const [unlockHeader,  setUnlockHeader] = useState(false);
+  const [widthNav,  setWidthNav] = useState(0);
   useEffect(()=>{
+    setWidthNav(document.querySelector('.welcomePage-container').clientWidth)
+
+    window.addEventListener('resize', ()=>{
+      if(widthNav != document.querySelector('.welcomePage-container').clientWidth ){
+        setWidthNav(document.querySelector('.welcomePage-container').clientWidth)
+      }
+    })
     window.addEventListener('scroll', ()=>{
       if( window.scrollY > 200){
         setUnlockHeader(true)
+
       }else{
         setUnlockHeader(false)
       }
@@ -26,7 +35,7 @@ const Nav = ()=>{
   },[])
   return(
     <div className="container">
-        <div className={classNames("header  wow fadeInDown", {"header-unlock": unlockHeader})}>
+        <div className={classNames("header  wow fadeInDown", {"header-unlock": unlockHeader})} style={{width:`${widthNav > 0 ? `${widthNav}px` : 'auto'}`}}>
         <h1>ALEKSIE</h1>
         <div className="navigate">
             <Link to={'#aboutme'} smooth={true} duration={700} className="navigate-item textWithUnderline">About</Link>

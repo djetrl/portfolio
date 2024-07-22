@@ -132,21 +132,15 @@
 
 @media screen and (min-width: 1709px){
   .contact{
-    padding: 0;
+    padding: 0 auto;
   }
-  .container:has(.contact){
-    padding: 8% 4% 0 4%;
-  }
+
 }
 @media screen and (max-width: 1225px){
-  .container:has(.contact){
-    padding: 25% 7% 0 7%;
-  }
+
 }
 @media screen and (max-width: 925px){
-  .container:has(.contact){
-    padding: 15% 7% 0 7%;
-  }
+
   .contact-inner{
     flex-direction: column;
     gap: 3vh;

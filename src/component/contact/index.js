@@ -28,12 +28,13 @@ const SingupSchema = Yup.object().shape({
 
 })
 const Contact = ({copiedModal, onAppearanceModalCopied, sendMailModal, sendMail})=>{
+
   return(
     <div className="container">
       <div className="contact wow fadeInUp"  id='contact'>
           {copiedModal ? (
                 <div className="modal-clipboard">
-                    copied
+                    {copiedModal}
                 </div>
           ):null}
           {sendMailModal === "ok" ?(

@@ -9,7 +9,7 @@ const ContactPage = ({pageNumber})=>{
   const onAppearanceModalCopied = (event, text)=>{
     event.preventDefault()
     window.navigator.clipboard.writeText(text).then((data)=>{
-      setCopiedModal(true);
+      setCopiedModal(text);
       setTimeout(()=>{
         setCopiedModal(false);
       }, 1000);
