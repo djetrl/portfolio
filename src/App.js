@@ -5,15 +5,15 @@ import { Element } from 'react-scroll';
 import {  Skills, Portfolio, Contact } from './container';
 import { WelcomePage, AboutMe } from './component';
 class App extends React.Component {
-	componentDidMount() {
-		const wow = new WOW({
-		  offset: 100,
-		  mobile: false, 
-		  live: true 
-		})
+	// componentDidMount() {
+	// 	const wow = new WOW({
+	// 	  offset: 100,
+	// 	  mobile: false, 
+	// 	  live: true 
+	// 	})
 
-		wow.init();
-	}
+	// 	wow.init();
+	// }
 
 	render() {
 		return (

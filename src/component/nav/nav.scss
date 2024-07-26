@@ -43,6 +43,9 @@
   }
 }
 
+
+
+
 .navigate{
 
 
@@ -55,4 +58,141 @@
 
   }
 }
+.navigate--burger__menu{
+  display: none;
+  flex-direction: column;
+  transition: all .5s ease;
+}
+.burger__menu{
+  display: none;
+  background-color: white;
+  width: 50px;
+  height: 5px;
+  position: relative;
+  transition: all .5s ease;
+}
+.burger__menu::after{
+  content: '';
+  display: block;
+  background-color: white;
+  width: 50px;
+  height: 5px;
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .5s ease;
+}
+
+
+.burger__menu::before{
+  content: '';
+  display: block;
+  background-color: white;
+  width: 50px;
+  height: 5px;
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .5s ease;
+}
+
+
+.burger__menu--container{
+  display: none;
+  align-items: center;
+}
+.burger__menu-active{
+  background-color: inherit;
+  
+}
+.burger__menu-active::after{
+  transform: rotate(45deg);
+  top: 0;
+  left: 0;
+}
+.burger__menu-active::before{
+  transform: rotate(-45deg);
+  top: 0;
+  left: 0;
+}
+
+
+.navigate--burger__menu-active { 
+  z-index: 1100;
+  display: flex;
+  flex-direction: row-reverse;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 100vh;
+  width: 100vw;
+
+}
+.navigate--burger__menu-active .navigate_list{
+  transition: all .5s ease;
+  display: flex;
+  flex-direction: column;
+  background: black;
+  height: 100vh;
+  width: 50vw;
+  gap: 8vw;
+  padding: 5vw;
+  align-items: flex-end;
+  animation: slidein .5s ease;
+  z-index: 54;
+}
+
+.navigate--burger__menu-active .navigate-item{
+  font-size: 20px;
+
+
+}
+.burger__menu_clone{
+  position: fixed;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  background: #000000b5;
+  animation: fade .5s ease;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+@media screen and (max-width: 730px){
+  .burger__menu--container{
+    display: flex;
+  }
+  .burger__menu{
+    display: block;
+  }
+  .navigate:not(.navigate--burger__menu ){
+    display: none;
+  }
+}
+
 

@@ -72,6 +72,7 @@
   display: grid;
   clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
   height: 320px;
+  transition: all .5s ease;
   img{
     width: 100%;
     height: 100%;
@@ -228,4 +229,14 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 1023px){
+  .Portfolio-item-imgContainer {
+    flex-direction: column;
+  }
+  .Portfolio-imgGroup:nth-child(2) {
+    width: 100%;
+    flex-direction: row;
+}
 }

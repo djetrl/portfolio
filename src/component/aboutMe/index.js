@@ -1,9 +1,38 @@
 
+import { animated, useInView } from '@react-spring/web';
 import './aboutMe.scss';
+
+
 const AboutMe = () => {
+
+
+  const [ref, springs]  = useInView(
+    () => ({
+      
+      from: {
+        opacity: 0,
+        transform:'translateX(100%)'
+      },
+      to: {
+        transform:'translateX(0)',
+        opacity: 1,
+        reverse:false,
+      },
+      config:{
+        tension: 80, 
+        friction: 40,
+      }
+    }),
+    {   
+      rootMargin: '-30% 0px',
+
+    }
+  )
+
+
   return (
     <div className="container">
-      <div className="AboutMe  wow fadeInRight">
+      <animated.div className="AboutMe" style={springs} ref={ref}>
         <div className="AboutMe-content">
           <p className="wow fadeInUp" data-wow-duration="2s">Привет! Меня зовут <span>Гайдаренко Алексей</span> и я начинающий frontend-разработчик. Мой профиль – создание современных и удобных интерфейсов для веб-приложений.</p>
           <p className="wow fadeInUp" data-wow-duration="2s"> Я обладаю богатым опытом в разработке веб-сайтов, лендингови веб-приложений c использованием как ванильного javaScript, так и с использованием таких фреймворков как ReactJs, NextJS.</p>
@@ -20,7 +49,7 @@ const AboutMe = () => {
           </ul>
           <p className="wow fadeInUp" data-wow-duration="2s">Я открыт к новым вызовам и всегда стремлюсь улучшать свои навыки и знания. Я убежден, что взаимодействие, коммуникации и обучение - важные аспекты успешной работы в команде. Буду рад участвовать в интересных проектах, так что не стесняйтесь связаться со мной.</p>
         </div>
-      </div>
+      </animated.div>
     </div>
   )
 }

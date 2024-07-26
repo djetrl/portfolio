@@ -111,9 +111,11 @@
   }
 
   .validation-error{
-    font-size: clamp(18px, 21px, 23px);
+    padding-top: 10px;
+    font-size: clamp(18px, 100%, 23px);
     transform-origin: top;
     animation: appearanceError .5s linear;
+
   }
   .contact-form:has(.validation-error){
     gap: 4vh;
@@ -168,4 +170,32 @@
   .contact .contact-form:has(.validation-error) {
     gap: 2vh;
 }
+}
+
+
+@media screen and (max-width: 720px){
+
+  .contact-form input[type=submit] {
+    width: 34vw;
+    height: 9vw;
+  }
+
+}
+
+@media screen and (max-width: 520px){
+
+  .contact-form input[type=submit] {
+    width: 40vw;
+    height: 10vw;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+
+  .contact-form input[type=submit] {
+    width: 60vw;
+    height: 15vw;
+  }
+
 }

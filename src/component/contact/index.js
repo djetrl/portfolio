@@ -55,8 +55,11 @@ const Contact = ({copiedModal, onAppearanceModalCopied, sendMailModal, sendMail}
                 message:''
               }}
               validationSchema={SingupSchema}
-              onSubmit={value=>{
-                sendMail(value)
+              onSubmit= { async (values, {resetForm} )=> {
+                console.log(values);
+                sendMail(values)
+               await resetForm()
+                
               }}
             >
               {({
